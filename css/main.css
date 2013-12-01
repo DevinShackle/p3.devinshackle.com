@@ -1,0 +1,65 @@
+/**
+*	Title Section
+**/
+
+#headerWrapper {
+
+}
+
+#headerWrapper h3 {
+	float: right;
+	margin-top: 60px;
+}
+
+
+/**
+*	Input Section
+**/
+
+#mainInput {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 190px;
+	clear: both;
+	background-color: #eeeeee;
+}
+
+#leftInput {
+	float: left;
+	width: 275px;
+}
+
+#leftInput p{
+	float: left;
+	clear: left;
+	margin-top: 17px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+}
+
+#leftInput span{
+	margin-top: 12px;
+	float: right;
+}
+
+#rightInput {
+	width: 315px;
+	float: right;
+}
+
+#rightInput textarea {
+	height: 150px;
+	width: 300px;
+}
+
+
+/**
+*	Examples
+**/
+
+.example {
+	float: left;
+	height: 100px;
+	width: 100px;
+}
