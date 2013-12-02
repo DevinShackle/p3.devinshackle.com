@@ -21,6 +21,13 @@ $(document).ready(function() {
 	//call fontsList.foreach()
 		//add an example block for each font
 			//add font name as attribute
+	fontsList.forEach(function(font) {
+		var name = font.split(',')[0];
+		if(name.substring(0,1) == '"')
+			name = name.substring(1,name.length-1); 
+		$('#examples').append(
+			'<div class="example">'+ name +'<p>example text</p></div>');
+	});
 
 	/**
 	*	Change text color

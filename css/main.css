@@ -17,7 +17,7 @@
 **/
 
 #mainInput {
-	width: 600px;
+	width: 620px;
 	margin-right: auto;
 	margin-left: auto;
 	height: 190px;
@@ -27,7 +27,7 @@
 
 #leftInput {
 	float: left;
-	width: 275px;
+	width: 300px;
 }
 
 #leftInput p{
@@ -44,7 +44,7 @@
 }
 
 #rightInput {
-	width: 315px;
+	width: 310px;
 	float: right;
 }
 
