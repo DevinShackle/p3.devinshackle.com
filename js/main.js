@@ -18,6 +18,7 @@ $(document).ready(function() {
 		'"Courier New", Courier, monospace',
 		'"Lucida Console", Monaco, monospace'];
 
+	var defaultText = "The quick brown fox jumped over the lazy dog"
 		
 	/**
 	*	Set up example blocks
@@ -27,7 +28,7 @@ $(document).ready(function() {
 		if(name.substring(0,1) == '"')
 			name = name.substring(1,name.length-1); 
 
-		var toAdd = $('<div class="example">'+ name +'<p>example text</p></div>');
+		var toAdd = $('<div class="example">'+ name +'<p>' + defaultText + '</p></div>');
 		toAdd.css({'font-family':font});
 
 		$('#examples').append(toAdd);
@@ -76,6 +77,13 @@ $(document).ready(function() {
 		$('.example').css({'width':textWidth + 'px'});
 	});
 
+	/**
+	*	Change example text
+	**/
+	$('#exampleText').on('keyup change', function(event) {
+	var exampleText = $(this).val();
+	$('.example > p').html(exampleText); //this will set the content of the p element in each .example div 
+	});
 
 
 });
