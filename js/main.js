@@ -18,23 +18,19 @@ $(document).ready(function() {
 		'"Courier New", Courier, monospace',
 		'"Lucida Console", Monaco, monospace'];
 
-	//call fontsList.foreach()
-		//add an example block for each font
-			//add font name as attribute
-			
+		
+	/**
+	*	Set up example blocks
+	**/	
 	fontsList.forEach(function(font) {
 		var name = font.split(',')[0];
 		if(name.substring(0,1) == '"')
 			name = name.substring(1,name.length-1); 
-	/*
-		var toAdd = $.parseHTML('<div class="example">'+ name +'<p>example text</p></div>');
-		toAdd.css({'font-family':font});
-	*/
 
-		
-		$('#examples').append(
-			'<div class="example">'+ name +'<p>example text</p></div>').css({'font-family':font});
-		
+		var toAdd = $('<div class="example">'+ name +'<p>example text</p></div>');
+		toAdd.css({'font-family':font});
+
+		$('#examples').append(toAdd);
 	});
 
 
