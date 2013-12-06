@@ -16,6 +16,8 @@
 	<!-- for the awesome shortcut icon -->
 	<link rel="shortcut icon" href="favicon.ico" >
 
+	<title>FontFriendly</title>
+	<meta charset="UTF-8">
 
 </head>
 <body>
@@ -23,7 +25,9 @@
 		<div id="headerWrapper">
 			<img src="img/title.png" alt="Fontfriendly Title">
 			<h3>A Tool for Web Developers</h3>
+			<p>Quickly test how your web fonts will look with <b>your colors!</b></p>
 		</div> <!--/headerWrapper-->
+		<br>
 		<hr>
 		<div id="mainWrapper">
 			<div id="mainInput">
@@ -31,9 +35,30 @@
 					<div id="leftInput">
 						<p>Text Color: </p><span><input class="color" value="000000" type="text" name="textcolor"></span>
 						<p>Background Color: </p><span><input class="color" value="ffffff" type="text" name="backgroundcolor"></span>
-						<p>Text Size: </p><span><input value="16" type="text" name="textsize"></span>
-						<p>Text Block Height: </p><span><input value="100" type="text" name="textheight"></span>
-						<p>Text Block Width: </p><span><input value="100" type="text" name="textwidth"></span>
+
+						<p>Text Size: </p>
+						<span>
+						<select id="sizeSelect">
+							<option>12px</option>
+							<option selected="selected">16px</option>
+							<option>20px</option>
+							<option>32px</option>
+							<option>48px</option>
+							<option>64px</option>
+						</select>
+						</span>
+						<div id="checkBoxes">
+							<br>
+
+							<input id="boldText" type="checkbox" name="bold"/>
+								<label for="boldText">Bold</label>
+							<br>
+							<input id="italicText" type="checkbox" name="italics"/>
+								<label for="italicText">Italics</label>
+							<br>
+							<input id="underlineText" type="checkbox" name="underline"/>
+								<label for="underlineText">Underline</label>
+						</div>
 					</div> <!--/leftInput-->
 						<div id="rightInput">
 						<span>Text:</span><br>

@@ -52,29 +52,53 @@ $(document).ready(function() {
 	});
 
 	/**
-	*	Change text size
+	*	Detect change in drop-down text size chooser
 	**/
-	//NEED TO VALIDATE FOR NUMERIC INPUT BETWEEN 10 AND 100
-	$("input[name=textsize]").bind("change", function() {
-		var textSize = $(this).val();
-		$('.example').css({'font-size':textSize + "px"});
+	$("#sizeSelect").bind("change", function() {
+		var textSize = $("select option:selected").text();
+		var target = $(".example");
+		var boxSize = parseInt(textSize.substring(0,textSize.length-2)) * 10;
+
+		target.css({"font-size":textSize});
+
+		//update box size too
+		target.css({"height": boxSize});
+		target.css({"width": boxSize});
+
 	});
 
 	/**
-	*	Change text box height
+	*	Text effect options 
 	**/
-	$("input[name=textheight").bind("change", function() {
-		var textHeight = $(this).val();
-		$('.example').css({'height':textHeight + 'px'});
+
+	//bold
+	$("#boldText").change(function() {
+		var target = $(".example");
+		if($(this).is(":checked")){
+			target.css("font-weight", "bold");
+		} else {
+			target.css("font-weight", "normal");
+		};
 	});
 
+	//italics
+	$("#italicText").change(function() {
+		var target = $(".example");
+		if($(this).is(":checked")){
+			target.css("font-style", "italic");
+		} else {
+			target.css("font-style", "normal");
+		};
+	});
 
-	/**
-	*	Change text box width
-	**/
-	$("input[name=textwidth").bind("change", function() {
-		var textWidth = $(this).val();
-		$('.example').css({'width':textWidth + 'px'});
+	//underline
+	$("#underlineText").change(function() {
+		var target = $(".example");
+		if($(this).is(":checked")){
+			target.css("text-decoration", "underline");
+		} else {
+			target.css("text-decoration", "none");
+		};
 	});
 
 	/**
